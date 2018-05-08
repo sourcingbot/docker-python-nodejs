@@ -1,34 +1,32 @@
-[![Travis](https://img.shields.io/travis/nikolaik/docker-python-nodejs.svg?style=flat-square)](https://travis-ci.org/nikolaik/docker-python-nodejs)
-[![Pulls](https://img.shields.io/docker/pulls/nikolaik/python-nodejs.svg?style=flat-square)](https://hub.docker.com/r/nikolaik/python-nodejs/)
-[![Release](https://img.shields.io/github/release/nikolaik/docker-python-nodejs.svg?style=flat-square)](https://github.com/nikolaik/docker-python-nodejs/releases)
+[![Pulls](https://img.shields.io/docker/pulls/srcbot/docker-python-nodejs.svg?style=flat-square)](https://hub.docker.com/r/srcbot/docker-python-nodejs/)
 
-## Python (latest) with Node.js 8.x based on [beevelop/nodejs-python](https://github.com/beevelop/docker-nodejs-python)
+
+## Python (latest) with Node.js 8.x
+Somewhat based on [/nikolaik/docker-python-nodejs](https://github.com/nikolaik/docker-python-nodejs) which in turn is based on [beevelop/nodejs-python](https://github.com/beevelop/docker-nodejs-python)
 - Node: 8.x
 - npm: 5.x
 - yarn: stable
-- Python: latest
+- Python: 3.6
 - pip: 9.x
+- pipenv
 
 ----
 ### Pull from Docker Hub
 ```
-docker pull nikolaik/python-nodejs:latest
+docker pull srcbot/docker-python-nodejs:latest
 ```
 
 ### Build from GitHub
 ```
-docker build -t nikolaik/python-nodejs github.com/nikolaik/docker-python-nodejs
+docker build -t srcbot/docker-python-nodejs github.com/sourcingbot/docker-python-nodejs
 ```
 
 ### Run image
 ```
-docker run -it nikolaik/python-nodejs bash
+docker run -it srcbot/docker-python-nodejs bash
 ```
 
 ### Use as base image
 ```Dockerfile
-FROM nikolaik/python-nodejs:latest
+FROM srcbot/docker-python-nodejs:latest
 ```
-
-## Disclaimer
-> This is experimental and might break from time to time. Use at your own risk!
