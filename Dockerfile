@@ -1,17 +1,16 @@
-FROM python:latest
-MAINTAINER Nikolai R Kristiansen <nikolaik@gmail.com>
+FROM ubuntu:artful
+MAINTAINER Ereli Eran ereli@sourcingbot.com         
 
-# Install node prereqs, nodejs and yarn
-# Ref: https://deb.nodesource.com/setup_8.x
-# Ref: https://yarnpkg.com/en/docs/install
+# Install node nodejs and python
 RUN \
   apt-get update && \
-  apt-get install -yqq apt-transport-https
+  apt-get install -yqq apt-transport-https curl
 RUN \
-  echo "deb https://deb.nodesource.com/node_8.x jessie main" > /etc/apt/sources.list.d/nodesource.list && \
-  wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list && \
-  wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-  apt-get update && \
-  apt-get install -yqq nodejs yarn && \
-  rm -rf /var/lib/apt/lists/*
+  curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get install --assume-yes nodejs 
+RUN \
+    apt-get install --assume-yes python3.6 python3-pip
+RUN \
+  pip3 install pipenv
+RUN \
+  npm i -g serverless
