@@ -7,7 +7,8 @@ RUN \
   apt-get install -yqq apt-transport-https curl
 RUN \
   curl -sL https://deb.nodesource.com/setup_8.x | bash -
-RUN apt-get install --assume-yes nodejs 
+RUN apt-get install --assume-yes nodejs
+RUN npm i npm@latest -g
 RUN \
     apt-get install --assume-yes python3.6 python3-pip
 RUN \
