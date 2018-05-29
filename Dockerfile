@@ -4,7 +4,7 @@ MAINTAINER Ereli Eran ereli@sourcingbot.com
 # Install node nodejs and python
 RUN \
   apt-get update && \
-  apt-get install -yqq apt-transport-https curl
+  apt-get install -yqq apt-transport-https curl git
 RUN \
   curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install --assume-yes nodejs
