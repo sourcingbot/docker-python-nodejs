@@ -12,6 +12,6 @@ RUN npm i npm@latest -g
 RUN \
     apt-get install --assume-yes python3.6 python3-pip
 RUN \
-  pip3 install pipenv
+  pip3 install pipenv awscli
 RUN \
   npm i -g serverless
