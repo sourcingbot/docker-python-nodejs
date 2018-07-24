@@ -15,3 +15,5 @@ RUN \
   pip3 install pipenv awscli
 RUN \
   npm i -g serverless
+RUN \
+  npm i -g lerna
