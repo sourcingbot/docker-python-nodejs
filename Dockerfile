@@ -1,5 +1,4 @@
-FROM ubuntu:artful
-MAINTAINER Ereli Eran ereli@sourcingbot.com         
+FROM ubuntu:artful         
 
 # Install node nodejs and python
 RUN \
