@@ -5,11 +5,11 @@ RUN \
   apt-get update && \
   apt-get install -yqq apt-transport-https curl git
 RUN \
-  curl -sL https://deb.nodesource.com/setup_10.x | bash -
+  curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install --assume-yes nodejs
 RUN npm i npm@latest -g
 RUN \
-    apt-get install --assume-yes python3.6 python3-pip
+    apt-get install --assume-yes python3.8 python3-pip
 RUN \
   pip3 install pipenv awscli
 RUN \
