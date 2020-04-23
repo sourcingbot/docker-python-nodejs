@@ -16,3 +16,5 @@ RUN \
   npm i -g serverless
 RUN \
   npm i -g lerna
+RUN \
+  npm i -g aws-sdk
