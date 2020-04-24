@@ -17,4 +17,4 @@ RUN \
 RUN \
   npm i -g lerna
 RUN \
-  npm i -g aws-sdk
+  npm i -g aws-sdk@^2.369.0 @google-cloud/bigquery@^2.0.1 elasticsearch@^15.2.0 firebase-admin@^6.3.0 grpc@^1.20.2 handlebars@^4.7.3 sendmail@^1.6.1 xlsx@^0.15.3
